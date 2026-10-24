@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <title>BUSY MARS</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+      overscroll-behavior: none;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    video {
+      display: block;
+      width: min(100vw, 100vh);
+      height: min(100vw, 100vh);
+      object-fit: contain;
+      background: #000;
+      pointer-events: none;
+    }
+
+    @supports (width: 100svmin) {
+      video {
+        width: 100svmin;
+        height: 100svmin;
+      }
+    }
+  </style>
+</head>
+<body>
+  <video src="placeholder.mp4" autoplay muted loop playsinline disablepictureinpicture></video>
+  <script>
+    document.querySelector("video").play().catch(function () {});
+  </script>
+</body>
+</html>
